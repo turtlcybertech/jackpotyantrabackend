@@ -18,9 +18,9 @@ mongoose
     .then(() => console.log("Connected with Database"))
     .catch((err) => console.log(err));
 
-app.use("/", require('./Routes/resultRoute'));
-app.use("/", require('./Routes/adminRoutes'));
-app.set("port", 2200);
+app.use("/", require('./src/Routes/resultRoute'));
+app.use("/", require('./src/Routes/adminRoutes'));
+app.set("port", 9999);
 
 app.listen(app.get("port"), () => {
     console.log("Express server listening on port " + app.get("port"));
