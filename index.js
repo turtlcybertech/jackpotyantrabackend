@@ -20,6 +20,9 @@ mongoose
 
 app.use("/", require('./src/Routes/resultRoute'));
 app.use("/", require('./src/Routes/adminRoutes'));
+app.get("/", (req, res) => {
+    res.send("<h1>Welcome to Jacport Yantra</h1>");
+})
 app.set("port", 9999);
 
 app.listen(app.get("port"), () => {
